@@ -7,6 +7,7 @@ public class Telefono {
     //true = la pantalla esta encendida
     private boolean pantallaEncendida;
     
+    
     public Telefono(String modeloDelTelefono, int porcentajeBateria, boolean pantalla){
         modelo = modeloDelTelefono;
         porcentajeDeBateria = porcentajeBateria;
@@ -33,12 +34,12 @@ public class Telefono {
         porcentajeDeBateria = porcentajeDeBateria + cantidadCargada;
     }
     
-    public void pulsarBotonDeBloqueo(boolean botonPulsado){
-        if (botonPulsado == true) {
-            pantallaEncendida = true;
+    public void modificarPantallaEncendida(){
+        if (pantallaEncendida == true) {
+           pantallaEncendida = false;
         }
         else {
-            pantallaEncendida = false;
+            pantallaEncendida = true;
         }
     }
     
