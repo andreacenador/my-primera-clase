@@ -8,10 +8,15 @@ public class Telefono {
     private boolean pantallaEncendida;
     
     
-    public Telefono(String modeloDelTelefono, int porcentajeBateria, boolean pantalla){
+    public Telefono(String modeloDelTelefono, int porcentajeBateria){
         modelo = modeloDelTelefono;
         porcentajeDeBateria = porcentajeBateria;
-        pantallaEncendida = pantalla;
+        if (porcentajeDeBateria > 0 ) {
+            pantallaEncendida = true;
+        }
+        else {
+            pantallaEncendida = false;
+        }
     }
     
     public String getModelo() {
